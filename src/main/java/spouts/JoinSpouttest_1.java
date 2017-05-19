@@ -58,7 +58,7 @@ public class JoinSpouttest_1 extends BaseRichSpout {
         }
 
         String url = "jdbc:mysql://localhost:3306/jingdongdata?"
-                + "user=root&password=yao2376098&useUnicode=true&characterEncoding=UTF8";
+                + "user=root&password=12211104&useUnicode=true&characterEncoding=UTF8";
         try{
             Connection conn = null;
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -111,7 +111,7 @@ public class JoinSpouttest_1 extends BaseRichSpout {
     @Override
     public void declareOutputFields(OutputFieldsDeclarer outputFieldsDeclarer) {
         try{
-            Global.loadingDataStructure("/home/yao/intellij_IDE/work_space/SQLonStorm/src/main/resources/createtabledata.txt");
+            Global.loadingDataStructure("/Users/yuxiao/项目/stormSQL/code/SQLonStorm/src/main/resources/createtabledata.txt");
             HashMap<String, MTable> dataBase = Global.DataBase;
             MTable jData_Action_201602 = dataBase.get("JData_Action_201602");
             this.descOfOutputFields = new ArrayList<String>();
